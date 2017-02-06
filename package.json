@@ -1,0 +1,33 @@
+{
+  "name": "huron-example-setup",
+  "version": "1.0.0",
+  "description": "An example site using the Huron prototyping tool.",
+  "main": "index.js",
+  "scripts": {
+    "//" : "The Huron script runs the devserver so you can build prototypes on the fly",
+    "huron": "node ./node_modules/huron/dist/cli/huron-cli.js -w webpack.config.js -c huron.config.js",
+    "//" : "The Huron Build script runs the production build so you can share flat files.",
+    "huron-build": "node ./node_modules/huron/dist/cli/huron-cli.js -w webpack.config.js -c huron.config.js -p",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alleyinteractive/huron-examples.git"
+  },
+  "keywords": [
+    "huron"
+  ],
+  "author": "Alley Interactive",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/alleyinteractive/huron-examples/issues"
+  },
+  "homepage": "https://github.com/alleyinteractive/huron-examples#readme",
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "huron": "^2.0.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1"
+  }
+}
