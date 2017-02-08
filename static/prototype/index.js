@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 174);
+/******/ 	return __webpack_require__(__webpack_require__.s = 173);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -82,7 +82,7 @@
 
 
 var base64 = __webpack_require__(75)
-var ieee754 = __webpack_require__(138)
+var ieee754 = __webpack_require__(137)
 var isArray = __webpack_require__(55)
 
 exports.Buffer = Buffer
@@ -5324,7 +5324,7 @@ if (typeof Object.create === 'function') {
   };
 })(typeof module === 'undefined' || module, this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(169)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(168)(module)))
 
 /***/ }),
 /* 3 */
@@ -5898,8 +5898,8 @@ CipherBase.prototype._toString = function (value, enc, fin) {
 /* WEBPACK VAR INJECTION */(function(Buffer) {
 var inherits = __webpack_require__(1)
 var md5 = __webpack_require__(51)
-var rmd160 = __webpack_require__(156)
-var sha = __webpack_require__(158)
+var rmd160 = __webpack_require__(155)
+var sha = __webpack_require__(157)
 
 var Base = __webpack_require__(9)
 
@@ -6057,11 +6057,11 @@ var EE = __webpack_require__(24).EventEmitter;
 var inherits = __webpack_require__(1);
 
 inherits(Stream, EE);
-Stream.Readable = __webpack_require__(153);
-Stream.Writable = __webpack_require__(155);
-Stream.Duplex = __webpack_require__(150);
-Stream.Transform = __webpack_require__(154);
-Stream.PassThrough = __webpack_require__(152);
+Stream.Readable = __webpack_require__(152);
+Stream.Writable = __webpack_require__(154);
+Stream.Duplex = __webpack_require__(149);
+Stream.Transform = __webpack_require__(153);
+Stream.PassThrough = __webpack_require__(151);
 
 // Backwards-compat with node 0.4.x
 Stream.Stream = Stream;
@@ -7237,9 +7237,9 @@ function EVP_BytesToKey (password, salt, keyLen, ivLen) {
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer) {var asn1 = __webpack_require__(144)
-var aesid = __webpack_require__(143)
-var fixProc = __webpack_require__(145)
+/* WEBPACK VAR INJECTION */(function(Buffer) {var asn1 = __webpack_require__(143)
+var aesid = __webpack_require__(142)
+var fixProc = __webpack_require__(144)
 var ciphers = __webpack_require__(27)
 var compat = __webpack_require__(57)
 module.exports = parseKeys
@@ -7884,7 +7884,7 @@ util.inherits = __webpack_require__(1);
 
 /*<replacement>*/
 var internalUtil = {
-  deprecate: __webpack_require__(166)
+  deprecate: __webpack_require__(165)
 };
 /*</replacement>*/
 
@@ -8409,7 +8409,7 @@ function CorkedRequest(state) {
     }
   };
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(165).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(164).setImmediate))
 
 /***/ }),
 /* 35 */
@@ -9462,7 +9462,7 @@ if (typeof window === 'object') {
 } else {
   // Node.js or Web worker
   try {
-    var crypto = __webpack_require__(172);
+    var crypto = __webpack_require__(171);
 
     Rand.prototype._rand = function _rand(n) {
       return crypto.randomBytes(n);
@@ -10401,7 +10401,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, Buffer) {var createHmac = __webpack_require__(30)
-var checkParameters = __webpack_require__(146)
+var checkParameters = __webpack_require__(145)
 
 exports.pbkdf2 = function (password, salt, iterations, keylen, digest, callback) {
   if (typeof digest === 'function') {
@@ -10607,7 +10607,7 @@ util.inherits = __webpack_require__(1);
 /*</replacement>*/
 
 /*<replacement>*/
-var debugUtil = __webpack_require__(173);
+var debugUtil = __webpack_require__(172);
 var debug = void 0;
 if (debugUtil && debugUtil.debuglog) {
   debug = debugUtil.debuglog('stream');
@@ -10616,7 +10616,7 @@ if (debugUtil && debugUtil.debuglog) {
 }
 /*</replacement>*/
 
-var BufferList = __webpack_require__(151);
+var BufferList = __webpack_require__(150);
 var StringDecoder;
 
 util.inherits(Readable, Stream);
@@ -11913,7 +11913,7 @@ module.exports = Sha512
 /* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__( 164 );
+__webpack_require__( 163 );
 
 
 /***/ }),
@@ -11923,8 +11923,8 @@ __webpack_require__( 164 );
 /*eslint-disable*/
 
 
-var store = __webpack_require__(170);
-var assets = __webpack_require__(171);
+var store = __webpack_require__(169);
+var assets = __webpack_require__(170);
 var modules = {};
 
 assets.keys().forEach(function(key) {
@@ -11976,7 +11976,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var md5 = __webpack_require__(140);
+var md5 = __webpack_require__(139);
 
 /* eslint-disable no-underscore-dangle */
 // Accept the huron.js module for Huron development
@@ -12818,7 +12818,7 @@ function Entity(name, body) {
 Entity.prototype._createNamed = function createNamed(base) {
   var named;
   try {
-    named = __webpack_require__(167).runInThisContext(
+    named = __webpack_require__(166).runInThisContext(
       '(function ' + this.name + '(entity) {\n' +
       '  this._initNamed(entity);\n' +
       '})'
@@ -15077,7 +15077,7 @@ var sign = __webpack_require__(82)
 
 exports.createECDH = __webpack_require__(85)
 
-var publicEncrypt = __webpack_require__(147)
+var publicEncrypt = __webpack_require__(146)
 
 ;[
   'publicEncrypt',
@@ -22424,22 +22424,16 @@ exports.shr64_lo = shr64_lo;
 /* 135 */
 /***/ (function(module, exports) {
 
-module.exports = "<dom-module>\n<template id=\"prototype-homepage\">\n<div class=\"homepage\">\n\t<h1>Sample prototype</h1>\n</div>\n\n</template>\n</dom-module>\n";
+module.exports = "<dom-module>\n<template id=\"prototype-sample\">\n<div class=\"sample\">\n\t<h1>Sample prototype</h1>\n\n\t<p>You only have a few requirements to setting up your sample prototype:</p>\n\n\t<ul>\n\t\t<li>Name it in the <code>prototypes</code> array in your huron.config.js.</li>\n\t\t<li>Create a <code>prototypes</code> folder inside one of your KSS folders (that also should listed in your Huron config).</li>\n\t\t<li>Name the prototype file should be <code>prototype-[name].html</code>.</li>\n\t\t<li>Make sure to wrap the contents of the prototype with a single root element (e.g. <code>div</code>).</li>\n\t</ul>\n\n\t<hr>\n\n\t<h2>Example KSS partials:</h2>\n\n\t<p>For more information on how to include KSS partials, see the <a href=\"https://github.com/alleyinteractive/huron#writing-kss-templates-and-data\">Huron documentation</a>.</p>\n\n\t<div data-huron-id=\"site-sample-kss\" data-huron-modifier=\"first\" data-huron-type=\"template\"></div>\n\n\t<div data-huron-id=\"site-sample-kss\" data-huron-modifier=\"second\" data-huron-type=\"template\"></div>\n\n\t<div data-huron-id=\"site-sample-kss\" data-huron-modifier=\"third\" data-huron-type=\"template\"></div>\n</div>\n\n</template>\n</dom-module>\n";
 
 /***/ }),
 /* 136 */
 /***/ (function(module, exports) {
 
-module.exports = "<dom-module>\n<template id=\"prototype-sample\">\n<div class=\"sample\">\n\t<h1>Sample prototype</h1>\n\n\t<p>You only have a few requirements to setting up your sample prototype:</p>\n\n\t<ul>\n\t\t<li>Name it in the <code>prototypes</code> array in your huron.config.js.</li>\n\t\t<li>Create a <code>prototypes</code> folder inside one of your KSS folders (that also should listed in your Huron config).</li>\n\t\t<li>Name the prototype file should be <code>prototype-[name].html</code>.</li>\n\t\t<li>Make sure to wrap the contents of the prototype with a single root element (e.g. <code>div</code>).</li>\n\t</ul>\n\n\t<hr>\n\n\t<h2>Example KSS partials:</h2>\n\n\t<div data-huron-id=\"site-sample-kss\" data-huron-modifier=\"first\" data-huron-type=\"template\"></div>\n\n\t<div data-huron-id=\"site-sample-kss\" data-huron-modifier=\"second\" data-huron-type=\"template\"></div>\n\n\t<div data-huron-id=\"site-sample-kss\" data-huron-modifier=\"third\" data-huron-type=\"template\"></div>\n</div>\n\n</template>\n</dom-module>\n";
-
-/***/ }),
-/* 137 */
-/***/ (function(module, exports) {
-
 module.exports = "<dom-module>\n<template id=\"site-sample-kss\">\n<p>This is a sample element. Put the description here.</p>\n\n</template>\n</dom-module>\n";
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -22529,7 +22523,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, exports) {
 
 
@@ -22544,7 +22538,7 @@ module.exports = function(arr, obj){
 };
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -22565,7 +22559,7 @@ module.exports = function(arr, obj){
     root = global;
   }
   var COMMON_JS = !root.JS_MD5_NO_COMMON_JS && typeof module === 'object' && module.exports;
-  var AMD = "function" === 'function' && __webpack_require__(168);
+  var AMD = "function" === 'function' && __webpack_require__(167);
   var ARRAY_BUFFER = !root.JS_MD5_NO_ARRAY_BUFFER && typeof ArrayBuffer !== 'undefined';
   var HEX_CHARS = '0123456789abcdef'.split('');
   var EXTRA = [128, 32768, 8388608, -2147483648];
@@ -23151,7 +23145,7 @@ module.exports = function(arr, obj){
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(8)))
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -23170,7 +23164,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -23200,7 +23194,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -23219,7 +23213,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 144 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // from https://github.com/indutny/self-signed/blob/gh-pages/lib/asn1.js
@@ -23342,7 +23336,7 @@ exports.signature = asn1.define('signature', function () {
 
 
 /***/ }),
-/* 145 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {// adapted from https://github.com/apatil/pemstrip
@@ -23379,7 +23373,7 @@ module.exports = function (okey, password) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 146 */
+/* 145 */
 /***/ (function(module, exports) {
 
 var MAX_ALLOC = Math.pow(2, 30) - 1 // default in iojs
@@ -23403,11 +23397,11 @@ module.exports = function (iterations, keylen) {
 
 
 /***/ }),
-/* 147 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports.publicEncrypt = __webpack_require__(149);
-exports.privateDecrypt = __webpack_require__(148);
+exports.publicEncrypt = __webpack_require__(148);
+exports.privateDecrypt = __webpack_require__(147);
 
 exports.privateEncrypt = function privateEncrypt(key, buf) {
   return exports.publicEncrypt(key, buf, true);
@@ -23418,7 +23412,7 @@ exports.publicDecrypt = function publicDecrypt(key, buf) {
 };
 
 /***/ }),
-/* 148 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {var parseKeys = __webpack_require__(26);
@@ -23532,7 +23526,7 @@ function compare(a, b){
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {var parseKeys = __webpack_require__(26);
@@ -23633,14 +23627,14 @@ function nonZero(len, crypto) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(7)
 
 
 /***/ }),
-/* 151 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23710,14 +23704,14 @@ BufferList.prototype.concat = function (n) {
 };
 
 /***/ }),
-/* 152 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(61)
 
 
 /***/ }),
-/* 153 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {var Stream = (function (){
@@ -23740,21 +23734,21 @@ if (!process.browser && process.env.READABLE_STREAM === 'disable' && Stream) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ }),
-/* 154 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(33)
 
 
 /***/ }),
-/* 155 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(34)
 
 
 /***/ }),
-/* 156 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -23971,7 +23965,7 @@ module.exports = ripemd160
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 157 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -24164,7 +24158,7 @@ module.exports = ripemd160
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8), __webpack_require__(5)))
 
 /***/ }),
-/* 158 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var exports = module.exports = function SHA (algorithm) {
@@ -24176,16 +24170,16 @@ var exports = module.exports = function SHA (algorithm) {
   return new Algorithm()
 }
 
-exports.sha = __webpack_require__(159)
-exports.sha1 = __webpack_require__(160)
-exports.sha224 = __webpack_require__(161)
+exports.sha = __webpack_require__(158)
+exports.sha1 = __webpack_require__(159)
+exports.sha224 = __webpack_require__(160)
 exports.sha256 = __webpack_require__(63)
-exports.sha384 = __webpack_require__(162)
+exports.sha384 = __webpack_require__(161)
 exports.sha512 = __webpack_require__(64)
 
 
 /***/ }),
-/* 159 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -24285,7 +24279,7 @@ module.exports = Sha
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 160 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -24390,7 +24384,7 @@ module.exports = Sha1
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 161 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/**
@@ -24449,7 +24443,7 @@ module.exports = Sha224
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 162 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {var inherits = __webpack_require__(1)
@@ -24512,7 +24506,7 @@ module.exports = Sha384
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 163 */
+/* 162 */
 /***/ (function(module, exports) {
 
 /*
@@ -24764,7 +24758,7 @@ function updateLink(linkElement, obj) {
 
 
 /***/ }),
-/* 164 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -24773,7 +24767,7 @@ function updateLink(linkElement, obj) {
 var content = __webpack_require__(88);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(163)(content, {});
+var update = __webpack_require__(162)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -24790,7 +24784,7 @@ if(false) {
 }
 
 /***/ }),
-/* 165 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -24843,13 +24837,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(157);
+__webpack_require__(156);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -24923,10 +24917,10 @@ function config (name) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 167 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var indexOf = __webpack_require__(139);
+var indexOf = __webpack_require__(138);
 
 var Object_keys = function (obj) {
     if (Object.keys) return Object.keys(obj)
@@ -25067,7 +25061,7 @@ exports.createContext = Script.createContext = function (context) {
 
 
 /***/ }),
-/* 168 */
+/* 167 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -25076,7 +25070,7 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ }),
-/* 169 */
+/* 168 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -25104,7 +25098,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 170 */
+/* 169 */
 /***/ (function(module, exports) {
 
 /*eslint-disable*/
@@ -25113,16 +25107,15 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 171 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"./huron-sections/sections.hbs": 113,
-	"./prototypes/prototype-homepage-prototype.html": 135,
-	"./prototypes/prototype-sample-prototype.html": 136,
-	"./site-sample-kss-data.json": 141,
-	"./site-sample-kss-description.html": 137,
-	"./site-sample-kss-section.json": 142,
+	"./prototypes/prototype-sample-prototype.html": 135,
+	"./site-sample-kss-data.json": 140,
+	"./site-sample-kss-description.html": 136,
+	"./site-sample-kss-section.json": 141,
 	"./site-sample-kss-template.hbs": 114
 };
 function webpackContext(req) {
@@ -25139,8 +25132,14 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 171;
+webpackContext.id = 170;
 
+
+/***/ }),
+/* 171 */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ }),
 /* 172 */
@@ -25150,12 +25149,6 @@ webpackContext.id = 171;
 
 /***/ }),
 /* 173 */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(66);

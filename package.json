@@ -7,7 +7,7 @@
     "//" : "The Huron script runs the devserver so you can build prototypes on the fly",
     "huron": "node ./node_modules/huron/dist/cli/huron-cli.js -w webpack.config.js -c huron.config.js",
     "//" : "The Huron Build script runs the production build so you can share flat files.",
-    "huron-build": "node ./node_modules/huron/dist/cli/huron-cli.js -w webpack.config.js -c huron.config.js -p",
+    "huron-build": "node ./node_modules/huron/dist/cli/huron-cli.js -w webpack.config.js -c huron.config.js -p"
   },
   "repository": {
     "type": "git",
