@@ -5324,7 +5324,7 @@ if (typeof Object.create === 'function') {
   };
 })(typeof module === 'undefined' || module, this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(168)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(166)(module)))
 
 /***/ }),
 /* 3 */
@@ -5898,8 +5898,8 @@ CipherBase.prototype._toString = function (value, enc, fin) {
 /* WEBPACK VAR INJECTION */(function(Buffer) {
 var inherits = __webpack_require__(1)
 var md5 = __webpack_require__(51)
-var rmd160 = __webpack_require__(155)
-var sha = __webpack_require__(157)
+var rmd160 = __webpack_require__(153)
+var sha = __webpack_require__(155)
 
 var Base = __webpack_require__(9)
 
@@ -6057,11 +6057,11 @@ var EE = __webpack_require__(24).EventEmitter;
 var inherits = __webpack_require__(1);
 
 inherits(Stream, EE);
-Stream.Readable = __webpack_require__(152);
-Stream.Writable = __webpack_require__(154);
-Stream.Duplex = __webpack_require__(149);
-Stream.Transform = __webpack_require__(153);
-Stream.PassThrough = __webpack_require__(151);
+Stream.Readable = __webpack_require__(150);
+Stream.Writable = __webpack_require__(152);
+Stream.Duplex = __webpack_require__(147);
+Stream.Transform = __webpack_require__(151);
+Stream.PassThrough = __webpack_require__(149);
 
 // Backwards-compat with node 0.4.x
 Stream.Stream = Stream;
@@ -7237,9 +7237,9 @@ function EVP_BytesToKey (password, salt, keyLen, ivLen) {
 /* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer) {var asn1 = __webpack_require__(143)
-var aesid = __webpack_require__(142)
-var fixProc = __webpack_require__(144)
+/* WEBPACK VAR INJECTION */(function(Buffer) {var asn1 = __webpack_require__(141)
+var aesid = __webpack_require__(140)
+var fixProc = __webpack_require__(142)
 var ciphers = __webpack_require__(27)
 var compat = __webpack_require__(57)
 module.exports = parseKeys
@@ -7884,7 +7884,7 @@ util.inherits = __webpack_require__(1);
 
 /*<replacement>*/
 var internalUtil = {
-  deprecate: __webpack_require__(165)
+  deprecate: __webpack_require__(163)
 };
 /*</replacement>*/
 
@@ -8409,7 +8409,7 @@ function CorkedRequest(state) {
     }
   };
 }
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(164).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(162).setImmediate))
 
 /***/ }),
 /* 35 */
@@ -10401,7 +10401,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process, Buffer) {var createHmac = __webpack_require__(30)
-var checkParameters = __webpack_require__(145)
+var checkParameters = __webpack_require__(143)
 
 exports.pbkdf2 = function (password, salt, iterations, keylen, digest, callback) {
   if (typeof digest === 'function') {
@@ -10616,7 +10616,7 @@ if (debugUtil && debugUtil.debuglog) {
 }
 /*</replacement>*/
 
-var BufferList = __webpack_require__(150);
+var BufferList = __webpack_require__(148);
 var StringDecoder;
 
 util.inherits(Readable, Stream);
@@ -11913,7 +11913,7 @@ module.exports = Sha512
 /* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__( 163 );
+__webpack_require__( 161 );
 
 
 /***/ }),
@@ -11923,8 +11923,8 @@ __webpack_require__( 163 );
 /*eslint-disable*/
 
 
-var store = __webpack_require__(169);
-var assets = __webpack_require__(170);
+var store = __webpack_require__(167);
+var assets = __webpack_require__(168);
 var modules = {};
 
 assets.keys().forEach(function(key) {
@@ -12818,7 +12818,7 @@ function Entity(name, body) {
 Entity.prototype._createNamed = function createNamed(base) {
   var named;
   try {
-    named = __webpack_require__(166).runInThisContext(
+    named = __webpack_require__(164).runInThisContext(
       '(function ' + this.name + '(entity) {\n' +
       '  this._initNamed(entity);\n' +
       '})'
@@ -15077,7 +15077,7 @@ var sign = __webpack_require__(82)
 
 exports.createECDH = __webpack_require__(85)
 
-var publicEncrypt = __webpack_require__(146)
+var publicEncrypt = __webpack_require__(144)
 
 ;[
   'publicEncrypt',
@@ -22559,7 +22559,7 @@ module.exports = function(arr, obj){
     root = global;
   }
   var COMMON_JS = !root.JS_MD5_NO_COMMON_JS && typeof module === 'object' && module.exports;
-  var AMD = "function" === 'function' && __webpack_require__(167);
+  var AMD = "function" === 'function' && __webpack_require__(165);
   var ARRAY_BUFFER = !root.JS_MD5_NO_ARRAY_BUFFER && typeof ArrayBuffer !== 'undefined';
   var HEX_CHARS = '0123456789abcdef'.split('');
   var EXTRA = [128, 32768, 8388608, -2147483648];
@@ -23149,55 +23149,6 @@ module.exports = function(arr, obj){
 /***/ (function(module, exports) {
 
 module.exports = {
-	"first": {
-		"title": "First sample partial",
-		"description": "Contents of the first sample."
-	},
-	"second": {
-		"title": "Second sample partial",
-		"description": "Contents of the second sample."
-	},
-	"third": {
-		"title": "Third sample partial",
-		"description": "Contents of the third sample."
-	}
-};
-
-/***/ }),
-/* 141 */
-/***/ (function(module, exports) {
-
-module.exports = {
-	"header": "Sample partial",
-	"description": "<p>This is a sample element. Put the description here.</p>\n",
-	"deprecated": false,
-	"experimental": false,
-	"reference": "site.sample-kss",
-	"referenceNumber": "1.1",
-	"referenceURI": "site-sample-kss",
-	"weight": 0,
-	"markup": "sample-kss.hbs",
-	"source": {
-		"filename": "",
-		"path": "",
-		"line": 1
-	},
-	"modifiers": [],
-	"parameters": [],
-	"data": "sample-kss.json",
-	"kssPath": "/Users/pattie/broadway/www/huron-example-setup/scss/_sample-kss.scss",
-	"dataPath": "./site-sample-kss-data.json",
-	"templatePath": "./site-sample-kss-template.hbs",
-	"templateContent": "<div class=\"sample-kss\">\n\t<h2 class=\"title\">{{title}}</h2>\n\t<p class=\"description\">\n\t\t{{description}}\n\t</p>\n</div>\n",
-	"sectionPath": "./site-sample-kss-section.json",
-	"descriptionPath": "./site-sample-kss-description.html"
-};
-
-/***/ }),
-/* 142 */
-/***/ (function(module, exports) {
-
-module.exports = {
 	"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 	"2.16.840.1.101.3.4.1.2": "aes-128-cbc",
 	"2.16.840.1.101.3.4.1.3": "aes-128-ofb",
@@ -23213,7 +23164,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 143 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // from https://github.com/indutny/self-signed/blob/gh-pages/lib/asn1.js
@@ -23336,7 +23287,7 @@ exports.signature = asn1.define('signature', function () {
 
 
 /***/ }),
-/* 144 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {// adapted from https://github.com/apatil/pemstrip
@@ -23373,7 +23324,7 @@ module.exports = function (okey, password) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 145 */
+/* 143 */
 /***/ (function(module, exports) {
 
 var MAX_ALLOC = Math.pow(2, 30) - 1 // default in iojs
@@ -23397,11 +23348,11 @@ module.exports = function (iterations, keylen) {
 
 
 /***/ }),
-/* 146 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports.publicEncrypt = __webpack_require__(148);
-exports.privateDecrypt = __webpack_require__(147);
+exports.publicEncrypt = __webpack_require__(146);
+exports.privateDecrypt = __webpack_require__(145);
 
 exports.privateEncrypt = function privateEncrypt(key, buf) {
   return exports.publicEncrypt(key, buf, true);
@@ -23412,7 +23363,7 @@ exports.publicDecrypt = function publicDecrypt(key, buf) {
 };
 
 /***/ }),
-/* 147 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {var parseKeys = __webpack_require__(26);
@@ -23526,7 +23477,7 @@ function compare(a, b){
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 148 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {var parseKeys = __webpack_require__(26);
@@ -23627,14 +23578,14 @@ function nonZero(len, crypto) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 149 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(7)
 
 
 /***/ }),
-/* 150 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23704,14 +23655,14 @@ BufferList.prototype.concat = function (n) {
 };
 
 /***/ }),
-/* 151 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(61)
 
 
 /***/ }),
-/* 152 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {var Stream = (function (){
@@ -23734,21 +23685,21 @@ if (!process.browser && process.env.READABLE_STREAM === 'disable' && Stream) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ }),
-/* 153 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(33)
 
 
 /***/ }),
-/* 154 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(34)
 
 
 /***/ }),
-/* 155 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -23965,7 +23916,7 @@ module.exports = ripemd160
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 156 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -24158,7 +24109,7 @@ module.exports = ripemd160
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8), __webpack_require__(5)))
 
 /***/ }),
-/* 157 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var exports = module.exports = function SHA (algorithm) {
@@ -24170,16 +24121,16 @@ var exports = module.exports = function SHA (algorithm) {
   return new Algorithm()
 }
 
-exports.sha = __webpack_require__(158)
-exports.sha1 = __webpack_require__(159)
-exports.sha224 = __webpack_require__(160)
+exports.sha = __webpack_require__(156)
+exports.sha1 = __webpack_require__(157)
+exports.sha224 = __webpack_require__(158)
 exports.sha256 = __webpack_require__(63)
-exports.sha384 = __webpack_require__(161)
+exports.sha384 = __webpack_require__(159)
 exports.sha512 = __webpack_require__(64)
 
 
 /***/ }),
-/* 158 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -24279,7 +24230,7 @@ module.exports = Sha
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 159 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -24384,7 +24335,7 @@ module.exports = Sha1
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 160 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/**
@@ -24443,7 +24394,7 @@ module.exports = Sha224
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 161 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {var inherits = __webpack_require__(1)
@@ -24506,7 +24457,7 @@ module.exports = Sha384
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).Buffer))
 
 /***/ }),
-/* 162 */
+/* 160 */
 /***/ (function(module, exports) {
 
 /*
@@ -24758,7 +24709,7 @@ function updateLink(linkElement, obj) {
 
 
 /***/ }),
-/* 163 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -24767,7 +24718,7 @@ function updateLink(linkElement, obj) {
 var content = __webpack_require__(88);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(162)(content, {});
+var update = __webpack_require__(160)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -24784,7 +24735,7 @@ if(false) {
 }
 
 /***/ }),
-/* 164 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -24837,13 +24788,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(156);
+__webpack_require__(154);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 165 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -24917,7 +24868,7 @@ function config (name) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 166 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var indexOf = __webpack_require__(138);
@@ -25061,7 +25012,7 @@ exports.createContext = Script.createContext = function (context) {
 
 
 /***/ }),
-/* 167 */
+/* 165 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -25070,7 +25021,7 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ }),
-/* 168 */
+/* 166 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -25098,24 +25049,24 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 169 */
+/* 167 */
 /***/ (function(module, exports) {
 
 /*eslint-disable*/
-    module.exports = {"types":["template","data","description","section","prototype","sections-template"],"config":{"port":8080,"output":"partials","root":"static/prototype","css":[],"js":[],"kss":["scss"],"window":{},"prototypes":["sample"],"entry":"index","kssOptions":{"multiline":true,"markdown":true,"custom":["data"],"header":true},"kssExtension":".scss","templates":{"rule":{"test":{},"use":"handlebars-template-loader","include":["/Users/pattie/broadway/www/huron-example-setup/static/prototype"]},"extension":".hbs"},"sectionTemplate":"/Users/pattie/broadway/www/huron-example-setup/node_modules/huron/templates/section.hbs"},"sections":{"sectionsByPath":{"/Users/pattie/broadway/www/huron-example-setup/scss/_sample-kss.scss":{"header":"Sample partial","description":"<p>This is a sample element. Put the description here.</p>\n","deprecated":false,"experimental":false,"reference":"site.sample-kss","referenceNumber":"1.1","referenceURI":"site-sample-kss","weight":0,"markup":"sample-kss.hbs","source":{"filename":"","path":"","line":1},"modifiers":[],"parameters":[],"data":"sample-kss.json","kssPath":"/Users/pattie/broadway/www/huron-example-setup/scss/_sample-kss.scss","dataPath":"./site-sample-kss-data.json","templatePath":"./site-sample-kss-template.hbs","templateContent":"<div class=\"sample-kss\">\n\t<h2 class=\"title\">{{title}}</h2>\n\t<p class=\"description\">\n\t\t{{description}}\n\t</p>\n</div>\n","sectionPath":"./site-sample-kss-section.json","descriptionPath":"./site-sample-kss-description.html"}},"sectionsByURI":{"site-sample-kss":{"header":"Sample partial","description":"<p>This is a sample element. Put the description here.</p>\n","deprecated":false,"experimental":false,"reference":"site.sample-kss","referenceNumber":"1.1","referenceURI":"site-sample-kss","weight":0,"markup":"sample-kss.hbs","source":{"filename":"","path":"","line":1},"modifiers":[],"parameters":[],"data":"sample-kss.json","kssPath":"/Users/pattie/broadway/www/huron-example-setup/scss/_sample-kss.scss","dataPath":"./site-sample-kss-data.json","templatePath":"./site-sample-kss-template.hbs","templateContent":"<div class=\"sample-kss\">\n\t<h2 class=\"title\">{{title}}</h2>\n\t<p class=\"description\">\n\t\t{{description}}\n\t</p>\n</div>\n","sectionPath":"./site-sample-kss-section.json","descriptionPath":"./site-sample-kss-description.html"}},"sorted":{"site":{"sample-kss":{}}}},"templates":{"./site-sample-kss-data.json":"./site-sample-kss-template.hbs","./site-sample-kss-template.hbs":"./site-sample-kss-data.json"},"prototypes":{"prototype-sample":"./prototypes/prototype-sample-prototype.html"},"sectionTemplatePath":"./huron-sections/sections.hbs","referenceDelimiter":"."}
+    module.exports = {"types":["template","data","description","section","prototype","sections-template"],"config":{"port":8080,"output":"partials","root":"static/prototype","css":[],"js":[],"kss":["scss"],"window":{},"prototypes":["sample"],"entry":"index","kssOptions":{"multiline":true,"markdown":true,"custom":["data"],"header":true},"kssExtension":".scss","templates":{"rule":{"test":{},"use":"handlebars-template-loader","include":["/Users/pattie/broadway/www/huron-example-setup/static/prototype"]},"extension":".hbs"},"sectionTemplate":"/Users/pattie/broadway/www/huron-example-setup/node_modules/huron/dist/templates/section.hbs"},"sections":{"sectionsByPath":{"/Users/pattie/broadway/www/huron-example-setup/scss/_sample-kss.scss":{"header":"Sample partial","description":"<p>This is a sample element. Put the description here.</p>\n","deprecated":false,"experimental":false,"reference":"site.sample-kss","referenceNumber":"1.1","referenceURI":"site-sample-kss","weight":0,"markup":"sample-kss.hbs","source":{"filename":"","path":"","line":1},"modifiers":[],"parameters":[],"data":"sample-kss.json","kssPath":"/Users/pattie/broadway/www/huron-example-setup/scss/_sample-kss.scss","dataPath":"./site-sample-kss-data.json","templatePath":"./site-sample-kss-template.hbs","templateContent":"<div class=\"sample-kss\">\n\t<h2 class=\"title\">{{title}}</h2>\n\t<p class=\"description\">\n\t\t{{description}}\n\t</p>\n</div>\n","sectionPath":"./site-sample-kss-section.json","descriptionPath":"./site-sample-kss-description.html"}},"sectionsByURI":{"site-sample-kss":{"header":"Sample partial","description":"<p>This is a sample element. Put the description here.</p>\n","deprecated":false,"experimental":false,"reference":"site.sample-kss","referenceNumber":"1.1","referenceURI":"site-sample-kss","weight":0,"markup":"sample-kss.hbs","source":{"filename":"","path":"","line":1},"modifiers":[],"parameters":[],"data":"sample-kss.json","kssPath":"/Users/pattie/broadway/www/huron-example-setup/scss/_sample-kss.scss","dataPath":"./site-sample-kss-data.json","templatePath":"./site-sample-kss-template.hbs","templateContent":"<div class=\"sample-kss\">\n\t<h2 class=\"title\">{{title}}</h2>\n\t<p class=\"description\">\n\t\t{{description}}\n\t</p>\n</div>\n","sectionPath":"./site-sample-kss-section.json","descriptionPath":"./site-sample-kss-description.html"}},"sorted":{"site":{"sample-kss":{}}}},"templates":{"./site-sample-kss-data.json":"./site-sample-kss-template.hbs","./site-sample-kss-template.hbs":"./site-sample-kss-data.json"},"prototypes":{"prototype-sample":"./prototypes/prototype-sample-prototype.html"},"sectionTemplatePath":"","referenceDelimiter":"."}
     /*eslint-disable*/
 
 
 /***/ }),
-/* 170 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"./huron-sections/sections.hbs": 113,
 	"./prototypes/prototype-sample-prototype.html": 135,
-	"./site-sample-kss-data.json": 140,
+	"./site-sample-kss-data.json": 169,
 	"./site-sample-kss-description.html": 136,
-	"./site-sample-kss-section.json": 141,
+	"./site-sample-kss-section.json": 170,
 	"./site-sample-kss-template.hbs": 114
 };
 function webpackContext(req) {
@@ -25132,8 +25083,57 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 170;
+webpackContext.id = 168;
 
+
+/***/ }),
+/* 169 */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"first": {
+		"title": "First sample partial",
+		"description": "Contents of the first sample."
+	},
+	"second": {
+		"title": "Second sample partial",
+		"description": "Contents of the second sample."
+	},
+	"third": {
+		"title": "Third sample partial",
+		"description": "Contents of the third sample."
+	}
+};
+
+/***/ }),
+/* 170 */
+/***/ (function(module, exports) {
+
+module.exports = {
+	"header": "Sample partial",
+	"description": "<p>This is a sample element. Put the description here.</p>\n",
+	"deprecated": false,
+	"experimental": false,
+	"reference": "site.sample-kss",
+	"referenceNumber": "1.1",
+	"referenceURI": "site-sample-kss",
+	"weight": 0,
+	"markup": "sample-kss.hbs",
+	"source": {
+		"filename": "",
+		"path": "",
+		"line": 1
+	},
+	"modifiers": [],
+	"parameters": [],
+	"data": "sample-kss.json",
+	"kssPath": "/Users/pattie/broadway/www/huron-example-setup/scss/_sample-kss.scss",
+	"dataPath": "./site-sample-kss-data.json",
+	"templatePath": "./site-sample-kss-template.hbs",
+	"templateContent": "<div class=\"sample-kss\">\n\t<h2 class=\"title\">{{title}}</h2>\n\t<p class=\"description\">\n\t\t{{description}}\n\t</p>\n</div>\n",
+	"sectionPath": "./site-sample-kss-section.json",
+	"descriptionPath": "./site-sample-kss-description.html"
+};
 
 /***/ }),
 /* 171 */
