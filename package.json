@@ -22,7 +22,7 @@
   "homepage": "https://github.com/alleyinteractive/huron-examples#readme",
   "devDependencies": {
     "css-loader": "^0.26.1",
-    "huron": "^2.1.1",
+    "huron": "file:huron",
     "node-sass": "^4.5.0",
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
