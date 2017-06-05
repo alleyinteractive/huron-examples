@@ -1,3 +1,10 @@
+# Misct
+.DS_Store
+.sass-cache
+.svn
+.thumbsdb
+npm-debug.log
+
 # Logs
 logs
 *.log
