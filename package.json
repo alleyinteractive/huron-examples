@@ -4,8 +4,8 @@
   "description": "An example site using the Huron prototyping tool.",
   "main": "index.js",
   "scripts": {
-    "huron": "huron -w webpack.config.js -c huron.config.js",
-    "huron-build": "huron -w webpack.config.js -c huron.config.js -p"
+    "huron": "huron/dist/cli/huron-cli.js -w webpack.config.js -c huron.config.js",
+    "huron-build": "huron/dist/cli/huron-cli.js -w webpack.config.js -c huron.config.js -p"
   },
   "repository": {
     "type": "git",
