@@ -4,8 +4,8 @@
   "description": "An example site using the Huron prototyping tool.",
   "main": "index.js",
   "scripts": {
-    "huron": "huron/dist/cli/huron-cli.js -w webpack.config.js -c huron.config.js",
-    "huron-build": "huron/dist/cli/huron-cli.js -w webpack.config.js -c huron.config.js -p"
+    "huron": "huron -w webpack.config.js -c huron.config.js",
+    "huron-build": "huron -w webpack.config.js -c huron.config.js -p"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
     "sass-loader": "6.0.5",
     "style-loader": "0.18.2",
     "webpack": "2.6.1",
-    "huron": "git+ssh//git@github.com:alleyinteractive/huron.git#master"
+    "huron": "git://github.com/alleyinteractive/huron.git#master"
   },
   "engines": {
     "node": "6",

@@ -2,14 +2,18 @@
 
 
 var store = require('./huron-store.js');
+var sectionTemplate = require('./section.hbs');
 var assets = require.context('../partials', true, /\.html|\.json|\.hbs$/);
 var modules = {};
+
+modules['./huron-assets/section.hbs'] = sectionTemplate;
 
 assets.keys().forEach(function(key) {
   modules[key] = assets(key);
 });
 
 if (module.hot) {
+  // Hot Module Replacement for huron components (json, hbs, html)
   module.hot.accept(
     assets.id,
     () => {
@@ -35,6 +39,21 @@ if (module.hot) {
     }
   );
 
+  // Hot Module Replacement for sections template
+  module.hot.accept(
+    './section.hbs',
+    () => {
+      var newSectionTemplate = require('./section.hbs');
+      modules['./huron-assets/section.hbs'] = newSectionTemplate;
+      hotReplace(
+        './huron-assets/section.hbs',
+        newSectionTemplate,
+        modules
+      );
+    }
+  );
+
+  // Hot Module Replacement for data store
   module.hot.accept(
     './huron-store.js',
     () => {
@@ -54,7 +73,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var md5 = require('js-md5');
+var crypto = require('crypto');
 
 /* eslint-disable no-underscore-dangle */
 // Accept the huron.js module for Huron development
@@ -99,11 +118,10 @@ var InsertNodes = function () {
   }
 
   /**
-   * Apply a modifier to a render function
+   * Get markup from any type of module (html, json or template)
    *
-   * @param {string} modifier - target modifier
-   * @param {object} meta - module metadata
-   * @return {string} rendered - the modified HTML module
+   * @param {string} content - String corresponding to markup
+   * @return {object} el.firstElementChild - HTML module
    */
 
 
@@ -541,6 +559,34 @@ var InsertNodes = function () {
     }
 
     /**
+     * Apply a modifier and merge classnames into template data, if it exists
+     *
+     * @param {object} data - data with which to render template
+     * @param {string} modifier - target modifier
+     *
+     * @return {string} rendered - the modified HTML module
+     */
+
+  }, {
+    key: 'prepareData',
+    value: function prepareData(data, modifier) {
+      var preparedData = data;
+
+      // If we have a modifier, use it, otherwise use the entire data set
+      if (modifier && data && data[modifier]) {
+        preparedData = Object.assign({}, data[modifier], { modifier: modifier });
+      }
+
+      if (this._store.classnames) {
+        preparedData = Object.assign({}, data, { styles: this._store.classnames });
+      }
+
+      console.log(preparedData);
+
+      return preparedData;
+    }
+
+    /**
      * Regenerate module meta cache
      */
 
@@ -623,7 +669,7 @@ var InsertNodes = function () {
             var modifiedPlaceholder = currentTag;
             var modifier = InsertNodes.getDataAttribute(modifiedPlaceholder, 'huron-modifier');
             var parent = modifiedPlaceholder.parentNode;
-            var rendered = InsertNodes.applyModifier(modifier, meta);
+            var rendered = _this7.prepareData(modifier, meta);
             var renderedTemplate = InsertNodes.convertToElement(rendered).querySelector('template');
             var renderedContents = null;
 
@@ -717,33 +763,6 @@ var InsertNodes = function () {
       this._sectionTemplatePath = store.sectionTemplatePath;
     }
   }], [{
-    key: 'applyModifier',
-    value: function applyModifier(modifier, meta) {
-      var rendered = false;
-      var data = meta.data;
-
-      if (data) {
-        // If we have a modifier, use it, otherwise use the entire data set
-        if (modifier && meta.data[modifier]) {
-          data = Object.assign({}, meta.data[modifier], { modifier: modifier });
-        }
-
-        rendered = meta.render(data);
-      } else {
-        rendered = meta.render();
-      }
-
-      return rendered;
-    }
-
-    /**
-     * Get markup from any type of module (html, json or template)
-     *
-     * @param {string} content - String corresponding to markup
-     * @return {object} el.firstElementChild - HTML module
-     */
-
-  }, {
     key: 'convertToElement',
     value: function convertToElement(content) {
       var el = document.createElement('div');
@@ -791,7 +810,7 @@ var InsertNodes = function () {
   }, {
     key: 'generateModuleHash',
     value: function generateModuleHash(key) {
-      return md5(key);
+      return crypto.createHash('md5').update(key).digest('hex');
     }
 
     /**
@@ -851,7 +870,7 @@ var InsertNodes = function () {
 
 var insert = new InsertNodes(modules, store);
 /*eslint-enable*/
-//# sourceMappingURL=huron.js.map
+//# sourceMappingURL=index.js.map
 
 
 function hotReplace(key, module, modules) {
