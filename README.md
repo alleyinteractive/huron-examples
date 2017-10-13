@@ -30,7 +30,7 @@ The setup is slightly more complicated if you're developing new features for hur
 
     `git clone --recursive https://github.com/alleyinteractive/huron-examples.git`
 
-2. Clone the huron repo 
+2. Clone the huron repo (this can be cloned anywhere)
 
     `git clone https://github.com/alleyinteractive/huron.git`
 
@@ -49,6 +49,8 @@ The setup is slightly more complicated if you're developing new features for hur
     `npm link huron`
 
 6. Any builds or updates you make in your local copy of huron will now be reflected in `node_modules/huron` within the `huron-examples` directory as well. This makes it so you won't have to publish each change, push it to git, or use the `file:` protocol in npm to develop with huron.
+
+7. Be sure to make a pull request to Huron for your feature(s) when they're ready. Follow the contributing guide in the [huron repo](https://github.com/alleyinteractive/huron/blob/master/CONTRIBUTING.md)
 
 **Troubleshooting:**
 * If you find the symlinked copy of huron in `huron-examples` is not updating, you may need to relink it:
