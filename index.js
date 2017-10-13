@@ -1,1 +1,1 @@
-require( 'style-loader!css-loader!sass-loader!./scss/loader.scss' );
+require( './scss/index.scss' );
