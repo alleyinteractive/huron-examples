@@ -1,9 +1,10 @@
-# Misct
+# Misc
 .DS_Store
 .sass-cache
 .svn
 .thumbsdb
 npm-debug.log
+huron
 
 # Logs
 logs
