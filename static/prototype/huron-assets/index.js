@@ -7,7 +7,7 @@ var sectionTemplate = require('./section.hbs');
 var assets = require.context('../partials', true, /\.html|\.json|\.hbs$/);
 var modules = {};
 
-modules[''] = sectionTemplate;
+modules['./huron-assets/section.hbs'] = sectionTemplate;
 
 assets.keys().forEach(function(key) {
   modules[key] = assets(key);
@@ -49,7 +49,7 @@ if (module.hot) {
     './section.hbs',
     () => {
       var newSectionTemplate = require('./section.hbs');
-      modules[''] = newSectionTemplate;
+      modules['./huron-assets/section.hbs'] = newSectionTemplate;
       hotReplace(
         './huron-assets/section.hbs',
         newSectionTemplate,

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 37);
+/******/ 	return __webpack_require__(__webpack_require__.s = 36);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -262,15 +262,6 @@ module.exports = exports['default'];
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// Create a simple path alias to allow browserify to resolve
-// the runtime on a supported path.
-module.exports = __webpack_require__(11)['default'];
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 
@@ -286,11 +277,11 @@ var _exception = __webpack_require__(1);
 
 var _exception2 = _interopRequireDefault(_exception);
 
-var _helpers = __webpack_require__(14);
+var _helpers = __webpack_require__(13);
 
-var _decorators = __webpack_require__(12);
+var _decorators = __webpack_require__(11);
 
-var _logger = __webpack_require__(22);
+var _logger = __webpack_require__(21);
 
 var _logger2 = _interopRequireDefault(_logger);
 
@@ -379,10 +370,19 @@ exports.logger = _logger2['default'];
 
 
 /***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Create a simple path alias to allow browserify to resolve
+// the runtime on a supported path.
+module.exports = __webpack_require__(10)['default'];
+
+
+/***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__( 28 );
+__webpack_require__( 27 );
 
 
 /***/ }),
@@ -392,13 +392,13 @@ __webpack_require__( 28 );
 /*eslint-disable*/
 
 
-var store = __webpack_require__(31);
-var InsertNodes = __webpack_require__(32).default;
-var sectionTemplate = __webpack_require__(10);
-var assets = __webpack_require__(33);
+var store = __webpack_require__(30);
+var InsertNodes = __webpack_require__(31).default;
+var sectionTemplate = __webpack_require__(9);
+var assets = __webpack_require__(32);
 var modules = {};
 
-modules[''] = sectionTemplate;
+modules['./huron-assets/section.hbs'] = sectionTemplate;
 
 assets.keys().forEach(function(key) {
   modules[key] = assets(key);
@@ -440,7 +440,7 @@ if (false) {
     './section.hbs',
     () => {
       var newSectionTemplate = require('./section.hbs');
-      modules[''] = newSectionTemplate;
+      modules['./huron-assets/section.hbs'] = newSectionTemplate;
       hotReplace(
         './huron-assets/section.hbs',
         newSectionTemplate,
@@ -577,77 +577,7 @@ function toComment(sourceMap) {
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Handlebars = __webpack_require__(2);
-function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
-module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
-    var helper;
-
-  return "			<h3 class=\"section__field-title section__description-header\">Description:</h3>\n			<div class=\"section__description\">\n				<div data-huron-id=\""
-    + container.escapeExpression(((helper = (helper = helpers.referenceURI || (depth0 != null ? depth0.referenceURI : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"referenceURI","hash":{},"data":data}) : helper)))
-    + "\" data-huron-type=\"description\"></div>\n			</div>\n";
-},"3":function(container,depth0,helpers,partials,data,blockParams,depths) {
-    var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {});
-
-  return "		<div class=\"section__markup\">\n			<h3 class=\"section__field-title section__markup-header\">Markup:</h3>\n"
-    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.modifiers : depth0),{"name":"if","hash":{},"fn":container.program(4, data, 0, blockParams, depths),"inverse":container.program(7, data, 0, blockParams, depths),"data":data})) != null ? stack1 : "")
-    + "\n"
-    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.templateContent : depth0),{"name":"if","hash":{},"fn":container.program(9, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "		</div>\n";
-},"4":function(container,depth0,helpers,partials,data,blockParams,depths) {
-    var stack1;
-
-  return ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.modifiers : depth0),{"name":"each","hash":{},"fn":container.program(5, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "");
-},"5":function(container,depth0,helpers,partials,data,blockParams,depths) {
-    var alias1=container.lambda, alias2=container.escapeExpression;
-
-  return "					<div class=\"section__modifier\">\n						<h4 class=\"section__modifier-header\">Modifier:\n							<span class=\"section__modifier-name\">"
-    + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
-    + "</span> -\n							<span class=\"section__modifier-description\">"
-    + alias2(alias1((depth0 != null ? depth0.description : depth0), depth0))
-    + "</span>\n						</h4>\n						<div class=\"section__modifier-content\">\n							<div data-huron-id=\""
-    + alias2(alias1((depths[1] != null ? depths[1].referenceURI : depths[1]), depth0))
-    + "\"\n								data-huron-type=\"template\"\n								data-huron-modifier=\""
-    + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
-    + "\"\n								class=\""
-    + alias2(alias1((depth0 != null ? depth0.className : depth0), depth0))
-    + "\">\n							</div>\n						</div>\n					</div>\n";
-},"7":function(container,depth0,helpers,partials,data) {
-    var alias1=container.lambda, alias2=container.escapeExpression;
-
-  return "				<div class=\"section__markup-content\">\n					<div data-huron-id=\""
-    + alias2(alias1((depth0 != null ? depth0.referenceURI : depth0), depth0))
-    + "\"\n						data-huron-type=\"template\"\n						class=\""
-    + alias2(alias1((depth0 != null ? depth0.className : depth0), depth0))
-    + "\">\n					</div>\n				</div>\n";
-},"9":function(container,depth0,helpers,partials,data) {
-    var helper;
-
-  return "				<div class=\"section__markup-illustrated\">\n					<pre>"
-    + container.escapeExpression(((helper = (helper = helpers.templateContent || (depth0 != null ? depth0.templateContent : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"templateContent","hash":{},"data":data}) : helper)))
-    + "</pre>\n				</div>\n";
-},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data,blockParams,depths) {
-    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
-
-  return "<dom-module>\n<template id=\"undefined\">\n<section class=\"section section-name-"
-    + alias4(((helper = (helper = helpers.referenceURI || (depth0 != null ? depth0.referenceURI : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"referenceURI","hash":{},"data":data}) : helper)))
-    + "\" id=\"styleguide-section-"
-    + alias4(((helper = (helper = helpers.referenceURI || (depth0 != null ? depth0.referenceURI : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"referenceURI","hash":{},"data":data}) : helper)))
-    + "\">\n	<h2 class=\"section__header\">"
-    + alias4(((helper = (helper = helpers.header || (depth0 != null ? depth0.header : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"header","hash":{},"data":data}) : helper)))
-    + "</h2>\n\n	<!-- description -->\n	<div class=\"section__meta\">\n		<h3 class=\"section__field-title section__reference\">Reference: <span>"
-    + alias4(((helper = (helper = helpers.reference || (depth0 != null ? depth0.reference : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"reference","hash":{},"data":data}) : helper)))
-    + "</span></h3>\n"
-    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.description : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "	</div>\n\n	<!-- markup -->\n"
-    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.markup : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "</section>\n</template>\n</dom-module>\n";
-},"useData":true,"useDepths":true});
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Handlebars = __webpack_require__(2);
+var Handlebars = __webpack_require__(3);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=container.escapeExpression, alias2=depth0 != null ? depth0 : (container.nullContext || {}), alias3=helpers.helperMissing, alias4="function";
@@ -662,10 +592,10 @@ module.exports = (Handlebars["default"] || Handlebars).template({"compiler":[7,"
 },"useData":true});
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Handlebars = __webpack_require__(2);
+var Handlebars = __webpack_require__(3);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
     var helper;
@@ -732,7 +662,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
 },"useData":true,"useDepths":true});
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -747,14 +677,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 
-var _handlebarsBase = __webpack_require__(3);
+var _handlebarsBase = __webpack_require__(2);
 
 var base = _interopRequireWildcard(_handlebarsBase);
 
 // Each of these augment the Handlebars object. No need to setup here.
 // (This is done to easily share code between commonjs and browse envs)
 
-var _handlebarsSafeString = __webpack_require__(25);
+var _handlebarsSafeString = __webpack_require__(24);
 
 var _handlebarsSafeString2 = _interopRequireDefault(_handlebarsSafeString);
 
@@ -766,11 +696,11 @@ var _handlebarsUtils = __webpack_require__(0);
 
 var Utils = _interopRequireWildcard(_handlebarsUtils);
 
-var _handlebarsRuntime = __webpack_require__(24);
+var _handlebarsRuntime = __webpack_require__(23);
 
 var runtime = _interopRequireWildcard(_handlebarsRuntime);
 
-var _handlebarsNoConflict = __webpack_require__(23);
+var _handlebarsNoConflict = __webpack_require__(22);
 
 var _handlebarsNoConflict2 = _interopRequireDefault(_handlebarsNoConflict);
 
@@ -805,7 +735,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -817,7 +747,7 @@ exports.registerDefaultDecorators = registerDefaultDecorators;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _decoratorsInline = __webpack_require__(13);
+var _decoratorsInline = __webpack_require__(12);
 
 var _decoratorsInline2 = _interopRequireDefault(_decoratorsInline);
 
@@ -828,7 +758,7 @@ function registerDefaultDecorators(instance) {
 
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -864,7 +794,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -876,31 +806,31 @@ exports.registerDefaultHelpers = registerDefaultHelpers;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _helpersBlockHelperMissing = __webpack_require__(15);
+var _helpersBlockHelperMissing = __webpack_require__(14);
 
 var _helpersBlockHelperMissing2 = _interopRequireDefault(_helpersBlockHelperMissing);
 
-var _helpersEach = __webpack_require__(16);
+var _helpersEach = __webpack_require__(15);
 
 var _helpersEach2 = _interopRequireDefault(_helpersEach);
 
-var _helpersHelperMissing = __webpack_require__(17);
+var _helpersHelperMissing = __webpack_require__(16);
 
 var _helpersHelperMissing2 = _interopRequireDefault(_helpersHelperMissing);
 
-var _helpersIf = __webpack_require__(18);
+var _helpersIf = __webpack_require__(17);
 
 var _helpersIf2 = _interopRequireDefault(_helpersIf);
 
-var _helpersLog = __webpack_require__(19);
+var _helpersLog = __webpack_require__(18);
 
 var _helpersLog2 = _interopRequireDefault(_helpersLog);
 
-var _helpersLookup = __webpack_require__(20);
+var _helpersLookup = __webpack_require__(19);
 
 var _helpersLookup2 = _interopRequireDefault(_helpersLookup);
 
-var _helpersWith = __webpack_require__(21);
+var _helpersWith = __webpack_require__(20);
 
 var _helpersWith2 = _interopRequireDefault(_helpersWith);
 
@@ -917,7 +847,7 @@ function registerDefaultHelpers(instance) {
 
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -963,7 +893,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1064,7 +994,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1096,7 +1026,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1132,7 +1062,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1165,7 +1095,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1184,7 +1114,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1224,7 +1154,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1278,7 +1208,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1303,10 +1233,10 @@ exports['default'] = function (Handlebars) {
 module.exports = exports['default'];
 //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL2xpYi9oYW5kbGViYXJzL25vLWNvbmZsaWN0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O3FCQUNlLFVBQVMsVUFBVSxFQUFFOztBQUVsQyxNQUFJLElBQUksR0FBRyxPQUFPLE1BQU0sS0FBSyxXQUFXLEdBQUcsTUFBTSxHQUFHLE1BQU07TUFDdEQsV0FBVyxHQUFHLElBQUksQ0FBQyxVQUFVLENBQUM7O0FBRWxDLFlBQVUsQ0FBQyxVQUFVLEdBQUcsWUFBVztBQUNqQyxRQUFJLElBQUksQ0FBQyxVQUFVLEtBQUssVUFBVSxFQUFFO0FBQ2xDLFVBQUksQ0FBQyxVQUFVLEdBQUcsV0FBVyxDQUFDO0tBQy9CO0FBQ0QsV0FBTyxVQUFVLENBQUM7R0FDbkIsQ0FBQztDQUNIIiwiZmlsZSI6Im5vLWNvbmZsaWN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyogZ2xvYmFsIHdpbmRvdyAqL1xuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24oSGFuZGxlYmFycykge1xuICAvKiBpc3RhbmJ1bCBpZ25vcmUgbmV4dCAqL1xuICBsZXQgcm9vdCA9IHR5cGVvZiBnbG9iYWwgIT09ICd1bmRlZmluZWQnID8gZ2xvYmFsIDogd2luZG93LFxuICAgICAgJEhhbmRsZWJhcnMgPSByb290LkhhbmRsZWJhcnM7XG4gIC8qIGlzdGFuYnVsIGlnbm9yZSBuZXh0ICovXG4gIEhhbmRsZWJhcnMubm9Db25mbGljdCA9IGZ1bmN0aW9uKCkge1xuICAgIGlmIChyb290LkhhbmRsZWJhcnMgPT09IEhhbmRsZWJhcnMpIHtcbiAgICAgIHJvb3QuSGFuZGxlYmFycyA9ICRIYW5kbGViYXJzO1xuICAgIH1cbiAgICByZXR1cm4gSGFuZGxlYmFycztcbiAgfTtcbn1cbiJdfQ==
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(35)))
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1335,7 +1265,7 @@ var _exception = __webpack_require__(1);
 
 var _exception2 = _interopRequireDefault(_exception);
 
-var _base = __webpack_require__(3);
+var _base = __webpack_require__(2);
 
 function checkRevision(compilerInfo) {
   var compilerRevision = compilerInfo && compilerInfo[0] || 1,
@@ -1620,7 +1550,7 @@ function executeDecorators(fn, prog, container, depths, data, blockParams) {
 
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1642,19 +1572,19 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 26 */
+/* 25 */
 /***/ (function(module, exports) {
 
 module.exports = "<dom-module>\n<template id=\"prototype-sample\">\n<div class=\"sample\">\n\t<h1>Sample prototype</h1>\n\n\t<p>You only have a few requirements to setting up your sample prototype:</p>\n\n\t<ul>\n\t\t<li>Name it in the <code>prototypes</code> array in your huron.config.js.</li>\n\t\t<li>Create a <code>prototypes</code> folder inside one of your KSS folders (that also should listed in your Huron config).</li>\n\t\t<li>Name the prototype file should be <code>prototype-[name].html</code>.</li>\n\t\t<li>Make sure to wrap the contents of the prototype with a single root element (e.g. <code>div</code>).</li>\n\t</ul>\n\n\t<hr>\n\n\t<h2>Example KSS partials:</h2>\n\n\t<p>For more information on how to include KSS partials, see the <a href=\"https://github.com/alleyinteractive/huron#writing-kss-templates-and-data\">Huron documentation</a>.</p>\n\n\t<div data-huron-id=\"site-sample-kss\" data-huron-modifier=\"first\" data-huron-type=\"template\"></div>\n\n\t<div data-huron-id=\"site-sample-kss\" data-huron-modifier=\"second\" data-huron-type=\"template\"></div>\n\n\t<div data-huron-id=\"site-sample-kss\" data-huron-modifier=\"third\" data-huron-type=\"template\"></div>\n</div>\n\n</template>\n</dom-module>\n";
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports) {
 
 module.exports = "<dom-module>\n<template id=\"site-sample-kss\">\n<p>This is a sample element. Put the description here.</p>\n\n</template>\n</dom-module>\n";
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -1668,7 +1598,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(29)(content, options);
+var update = __webpack_require__(28)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -1685,7 +1615,7 @@ if(false) {
 }
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -1731,7 +1661,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(30);
+var	fixUrls = __webpack_require__(29);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -2044,7 +1974,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports) {
 
 
@@ -2139,16 +2069,16 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports) {
 
 /*eslint-disable*/
-    module.exports = {"types":["template","data","description","section","prototype","sections-template"],"config":{"port":8080,"output":"partials","root":"static/prototype","css":[],"js":[],"kss":["scss"],"classNames":"/Users/owen/www/huron-examples/static/css/classNames","window":{},"prototypes":["sample"],"entry":"index","kssOptions":{"multiline":true,"markdown":true,"custom":["data"],"header":true},"kssExtension":".scss","templates":{"rule":{"test":{},"use":"handlebars-loader","include":["/Users/owen/www/huron-examples/static/prototype/partials"]},"extension":".hbs"},"sectionTemplate":"/Users/owen/www/huron/templates/section.hbs"},"classNames":{"index":{"sample-kss":"index__sample-kss___3WP4Q"}},"sections":{"sectionsByPath":{"/Users/owen/www/huron-examples/scss/_sample-kss.scss":{"header":"Sample partial","description":"<p>This is a sample element. Put the description here.</p>\n","deprecated":false,"experimental":false,"reference":"site.sample-kss","referenceNumber":"1.1","referenceURI":"site-sample-kss","weight":0,"markup":"sample-kss.hbs","modifiers":[],"parameters":[],"sourceFile":{"name":"","base":"","path":"","line":1},"data":"sample-kss.json","kssPath":"/Users/owen/www/huron-examples/scss/_sample-kss.scss","dataPath":"./site-sample-kss-data.json","templatePath":"./site-sample-kss-template.hbs","templateContent":"<div class=\"{{classNames.index.sample-kss}}\">\n\t<h2 class=\"title\">{{title}}</h2>\n\t<p class=\"description\">\n\t\t{{description}}\n\t</p>\n</div>\n","sectionPath":"./site-sample-kss-section.json","descriptionPath":"./site-sample-kss-description.html"}},"sectionsByURI":{"site-sample-kss":{"header":"Sample partial","description":"<p>This is a sample element. Put the description here.</p>\n","deprecated":false,"experimental":false,"reference":"site.sample-kss","referenceNumber":"1.1","referenceURI":"site-sample-kss","weight":0,"markup":"sample-kss.hbs","modifiers":[],"parameters":[],"sourceFile":{"name":"","base":"","path":"","line":1},"data":"sample-kss.json","kssPath":"/Users/owen/www/huron-examples/scss/_sample-kss.scss","dataPath":"./site-sample-kss-data.json","templatePath":"./site-sample-kss-template.hbs","templateContent":"<div class=\"{{classNames.index.sample-kss}}\">\n\t<h2 class=\"title\">{{title}}</h2>\n\t<p class=\"description\">\n\t\t{{description}}\n\t</p>\n</div>\n","sectionPath":"./site-sample-kss-section.json","descriptionPath":"./site-sample-kss-description.html"}},"sorted":{"site":{"sample-kss":{}}}},"templates":{"./site-sample-kss-data.json":"./site-sample-kss-template.hbs","./site-sample-kss-template.hbs":"./site-sample-kss-data.json"},"prototypes":{"prototype-sample":"./prototypes/prototype-sample-prototype.html"},"sectionTemplatePath":"","referenceDelimiter":"."}
+    module.exports = {"types":["template","data","description","section","prototype","sections-template"],"config":{"port":8080,"output":"partials","root":"static/prototype","css":[],"js":[],"kss":["scss"],"classNames":"/Users/owen/www/huron-examples/static/css/classNames","window":{},"prototypes":["sample"],"entry":"index","kssOptions":{"multiline":true,"markdown":true,"custom":["data"],"header":true},"kssExtension":".scss","templates":{"rule":{"test":{},"use":"handlebars-loader","include":["/Users/owen/www/huron-examples/static/prototype/partials"]},"extension":".hbs"},"sectionTemplate":"/Users/owen/www/huron/templates/section.hbs"},"classNames":{"index":{"sample-kss":"index__sample-kss___3WP4Q"}},"sections":{"sectionsByPath":{"/Users/owen/www/huron-examples/scss/_sample-kss.scss":{"header":"Sample partial","description":"<p>This is a sample element. Put the description here.</p>\n","deprecated":false,"experimental":false,"reference":"site.sample-kss","referenceNumber":"1.1","referenceURI":"site-sample-kss","weight":0,"markup":"sample-kss.hbs","modifiers":[],"parameters":[],"sourceFile":{"name":"","base":"","path":"","line":1},"data":"sample-kss.json","kssPath":"/Users/owen/www/huron-examples/scss/_sample-kss.scss","dataPath":"./site-sample-kss-data.json","templatePath":"./site-sample-kss-template.hbs","templateContent":"<div class=\"{{classNames.index.sample-kss}}\">\n\t<h2 class=\"title\">{{title}}</h2>\n\t<p class=\"description\">\n\t\t{{description}}\n\t</p>\n</div>\n","sectionPath":"./site-sample-kss-section.json","descriptionPath":"./site-sample-kss-description.html"}},"sectionsByURI":{"site-sample-kss":{"header":"Sample partial","description":"<p>This is a sample element. Put the description here.</p>\n","deprecated":false,"experimental":false,"reference":"site.sample-kss","referenceNumber":"1.1","referenceURI":"site-sample-kss","weight":0,"markup":"sample-kss.hbs","modifiers":[],"parameters":[],"sourceFile":{"name":"","base":"","path":"","line":1},"data":"sample-kss.json","kssPath":"/Users/owen/www/huron-examples/scss/_sample-kss.scss","dataPath":"./site-sample-kss-data.json","templatePath":"./site-sample-kss-template.hbs","templateContent":"<div class=\"{{classNames.index.sample-kss}}\">\n\t<h2 class=\"title\">{{title}}</h2>\n\t<p class=\"description\">\n\t\t{{description}}\n\t</p>\n</div>\n","sectionPath":"./site-sample-kss-section.json","descriptionPath":"./site-sample-kss-description.html"}},"sorted":{"site":{"sample-kss":{}}}},"templates":{"./site-sample-kss-data.json":"./site-sample-kss-template.hbs","./site-sample-kss-template.hbs":"./site-sample-kss-data.json"},"prototypes":{"prototype-sample":"./prototypes/prototype-sample-prototype.html"},"sectionTemplatePath":"./huron-assets/section.hbs","referenceDelimiter":"."}
     /*eslint-disable*/
 
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports =
@@ -4252,16 +4182,15 @@ module.exports = __webpack_require__("./src/web/index.js");
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./huron-sections/sections.hbs": 8,
-	"./prototypes/prototype-sample-prototype.html": 26,
-	"./site-sample-kss-data.json": 34,
-	"./site-sample-kss-description.html": 27,
-	"./site-sample-kss-section.json": 35,
-	"./site-sample-kss-template.hbs": 9
+	"./prototypes/prototype-sample-prototype.html": 25,
+	"./site-sample-kss-data.json": 33,
+	"./site-sample-kss-description.html": 26,
+	"./site-sample-kss-section.json": 34,
+	"./site-sample-kss-template.hbs": 8
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -4277,10 +4206,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 33;
+webpackContext.id = 32;
 
 /***/ }),
-/* 34 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -4299,7 +4228,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -4330,7 +4259,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 36 */
+/* 35 */
 /***/ (function(module, exports) {
 
 var g;
@@ -4357,7 +4286,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 37 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(5);
