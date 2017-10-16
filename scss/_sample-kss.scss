@@ -8,7 +8,7 @@
 //
 // Styleguide site.sample-kss
 
-.sample-kss {
+:local(.sample-kss) {
 	background-color: aliceblue;
 	border: 1px solid gray;
 	margin: 0 auto 2rem;

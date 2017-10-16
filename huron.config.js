@@ -25,10 +25,11 @@ module.exports = {
   port: 8080,
   prototypes: ['sample'],
   root: 'static/prototype',
+  classNames: path.join(__dirname, 'static/css/classNames'),
   templates: {
     rule: {
       test: /\.(hbs|handlebars)$/,
-      use: 'handlebars-template-loader',
+      use: 'handlebars-loader',
     },
     extension: '.hbs',
   },
