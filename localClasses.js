@@ -3,6 +3,6 @@ const fs = require('fs-extra');
 
 module.exports = function localClasses(cssFileName, json) {
   const cssFileInfo = path.parse(cssFileName);
-  const jsonFileName  = path.join('static/css/classNames', `${cssFileInfo.name}.json`);
+  const jsonFileName  = path.join(__dirname, 'static/css/classNames', `${cssFileInfo.name}.json`);
   fs.outputFileSync(jsonFileName, JSON.stringify(json));
 }
