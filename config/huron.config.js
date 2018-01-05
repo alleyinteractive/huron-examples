@@ -4,7 +4,6 @@
 
 // Requires
 const path = require('path');
-const fs = require('fs');
 
 /**
  * A configuration object for your Huron settings.
@@ -15,8 +14,6 @@ module.exports = {
   entry: 'main',
   css: ['vendor/css/vendor-styles.css'],
   js: ['vendor/js/vendor-script.js'],
-  assets: fs.readdirSync(path.join(__dirname, '../src/images'))
-    .map((file) => path.join('src/images', file)),
   kss: 'src/scss',
   kssExtension: '.scss',
   kssOptions: {
