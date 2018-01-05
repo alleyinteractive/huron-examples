@@ -16,7 +16,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /* eslint-enable */
 
-const assets = require.context('../partials', true, /\.html|\.json|\.hbs$/); /* globals requirePath, requireRegex, sectionTemplatePath */
+const assets = require.context('../partials', true, /\.html|\.json|\.hbs$/); /* globals hotScope */
 
 // NOTE: This is not a normal JS file! It is pulled in by the CLI as a string
 // and prepended to the browser script after replacing anything referenced via `hotScope[variable]`

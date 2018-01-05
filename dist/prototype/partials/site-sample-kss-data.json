@@ -1,7 +1,8 @@
 {
 	"first" : {
 		"title" : "First sample partial",
-		"description" : "Contents of the first sample."
+		"description" : "Contents of the first sample.",
+		"image": "images/test-image.jpg"
 	},
 	"second" : {
 		"title" : "Second sample partial",

@@ -1,8 +1,10 @@
 var path = require('path');
 
 module.exports = {
+  context: path.join(__dirname, '../src'),
+
 	entry: {
-		index: './index.js'
+		main: './js/index.js'
 	},
 
 	output: {
@@ -17,7 +19,14 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-          'postcss-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: path.join(__dirname, './postcss.config.js'),
+              },
+            },
+          },
           'sass-loader',
         ],
       },

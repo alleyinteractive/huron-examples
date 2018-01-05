@@ -3,7 +3,7 @@
  */
 
 // Requires
-path = require('path');
+const path = require('path');
 
 /**
  * A configuration object for your Huron settings.
@@ -11,10 +11,10 @@ path = require('path');
  * @see  https://github.com/alleyinteractive/huron/blob/master/config/README.md
  */
 module.exports = {
-  css: [],
-  entry: 'index',
-  js: [],
-  kss: 'scss',
+  entry: 'main',
+  css: ['vendor/css/vendor-styles.css'],
+  js: ['vendor/js/vendor-script.js'],
+  kss: 'src/scss',
   kssExtension: '.scss',
   kssOptions: {
     multiline: true,
@@ -24,8 +24,8 @@ module.exports = {
   output: 'partials',
   port: 8080,
   prototypes: ['sample'],
-  root: 'static/prototype',
-  classNames: path.join(__dirname, 'static/css/classNames'),
+  root: 'dist/prototype',
+  classNames: path.join(__dirname, '../dist/css/classNames'),
   templates: {
     rule: {
       test: /\.(hbs|handlebars)$/,
