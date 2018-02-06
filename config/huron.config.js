@@ -15,6 +15,7 @@ module.exports = {
   css: ['vendor/css/vendor-styles.css'],
   js: ['vendor/js/vendor-script.js'],
   kss: 'src/scss',
+  bodyClasses: ['test-class'],
   kssExtension: '.scss',
   kssOptions: {
     multiline: true,
@@ -23,7 +24,14 @@ module.exports = {
   },
   output: 'partials',
   port: 8080,
-  prototypes: ['sample'],
+  prototypes: [
+    {
+      prototypeEntry: ['other'],
+      bodyClasses: 'sample-class',
+      title: 'sample',
+      js: ['vendor/js/vendor-script-2.js'],
+    },
+  ],
   root: 'dist/prototype',
   classNames: path.join(__dirname, '../dist/css/classNames'),
   templates: {
