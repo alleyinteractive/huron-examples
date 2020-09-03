@@ -31,7 +31,7 @@
     "handlebars-loader": "1.6.0",
     "html-loader": "0.5.1",
     "huron": "git://github.com/alleyinteractive/huron.git#master",
-    "node-sass": "4.5.3",
+    "node-sass": "4.13.1",
     "postcss": "6.0.13",
     "postcss-loader": "2.0.7",
     "postcss-modules": "1.0.0",
