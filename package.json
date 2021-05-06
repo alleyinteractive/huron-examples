@@ -27,7 +27,7 @@
   "dependencies": {
     "css-loader": "0.28.4",
     "fs-extra": "4.0.2",
-    "handlebars": "4.0.10",
+    "handlebars": "4.7.7",
     "handlebars-loader": "1.6.0",
     "html-loader": "0.5.1",
     "huron": "git://github.com/alleyinteractive/huron.git#master",
